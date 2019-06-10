@@ -1,0 +1,27 @@
+<div class="flex flex-column">
+  <div class="header">header</div>
+  <div class="flex editor-content flex-grow">
+    <div class="flex">
+      <div class="page-list">
+        <page-list #pageList [pages]="pages"></page-list>
+      </div>
+      <div class="palette-list">
+          <div class="flex flex-column">
+              <div class="rr flex-grow tree-view">
+                <tree-view #treeView [page]="pageList.selectedPage"></tree-view>
+              </div>
+              <div class="rr flex-grow palette">
+                <component-palette></component-palette>
+              </div>
+            </div>
+      </div>
+      <div class="view-editor flex-grow">
+        <view-editor></view-editor> 
+      </div>
+      <div class="inspector">
+        <component-properties [components]="components" [selectedComponent]="treeView.selectedComponent"></component-properties>
+        <component-events></component-events>
+      </div>
+    </div>
+  </div>
+</div>

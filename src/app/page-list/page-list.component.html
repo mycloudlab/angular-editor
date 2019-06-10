@@ -1,0 +1,22 @@
+<div  (dblclick)="enableEdit(page)"  (contextmenu)="onContextMenu($event, page)" class="page selectable" *ngFor="let page of pages" (click)="select(page)" [ngClass]="{'selected': isSelected(page)}">
+    <span *ngIf="!isEditing(page)" style="font: 400 13.3333px Arial; text-align: center"> {{page.name}}</span>
+  
+  <input *ngIf="isEditing(page)" size="10"  style="font: 400 13.3333px Arial; text-align: center" (focusout)="disableEdit()" matInput [(ngModel)]="pageEditing.name">
+  <div style="position: fixed"
+        [style.left]="contextMenuPosition.x"
+        [style.top]="contextMenuPosition.y"
+        [matMenuTriggerFor]="contextMenu"
+		    [matMenuTriggerData]="{item: page}">
+		</div>
+</div>
+
+
+<mat-menu #contextMenu="matMenu">
+    <ng-template matMenuContent let-item="item">
+      <button mat-menu-item (click)="remove(item)">Remover</button>
+    </ng-template>
+  </mat-menu>
+
+<div mat-button class="page selectable new-page" (click)="newPage()">
+  + Add Page
+</div>

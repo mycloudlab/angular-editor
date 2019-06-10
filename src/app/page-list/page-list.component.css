@@ -1,0 +1,14 @@
+
+.page {
+    background: #fff;
+    padding: 20px 0;
+    border:1px solid #d1d1d1;
+    margin: 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.2), 0 4px 4px 0 rgba(0, 0, 0, 0.19);
+}
+
+ 
+.new-page {
+    background: rgb(236, 235, 235)
+}

@@ -1,0 +1,10 @@
+.tree-component ul,
+.tree-component li {
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+.tree-component-invisible {
+    display: none;
+  }
