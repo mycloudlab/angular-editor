@@ -1,0 +1,32 @@
+.library {
+    font-weight:  bold
+}
+
+.library-source {
+    vertical-align: sub;
+    font-size: smaller; 
+    border-bottom: 1px  solid;
+    margin-bottom: 5px;
+}
+
+.group {
+    margin-top: 20px;
+    font-weight:  100;
+}
+
+.components {
+    padding: 10px 20px;
+    background: #fff;
+    border:1px solid #d1d1d1;
+    margin: 10px;
+    margin-left: 20px;
+    box-shadow: 5px 5px 4px rgba(0, 0, 0, .3);
+}
+
+.component-desc {
+    vertical-align: sub;
+    font-size: smaller; 
+}
+
+
+

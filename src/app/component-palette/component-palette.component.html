@@ -1,3 +1,15 @@
-<p>
-  component-palette works!
-</p>
+<div *ngFor="let library of libraries">
+  <div class="library">{{library.name}}</div>
+  <div class="library-source">{{library.library}}</div>
+
+
+  <div *ngFor="let group of library.componentGroups" >
+    <div class="group">{{group.name}}</div>
+
+    <div cdkDrag class="components" *ngFor="let cmp of group.components">
+      {{cmp.name}}<br /> 
+      <span class="component-desc">({{cmp.component}}) - <a href="{{cmp.url}}">{{cmp.description}}</a></span>
+    </div>
+  </div>
+
+</div>

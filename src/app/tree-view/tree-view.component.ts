@@ -4,6 +4,10 @@ import { MatTreeNestedDataSource } from '@angular/material/tree';
 import { NestedTreeControl } from '@angular/cdk/tree';
 import { TreeComponent } from '../model/component';
 
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
+
+
+
 @Component({
   selector: 'tree-view',
   templateUrl: './tree-view.component.html',
@@ -45,5 +49,12 @@ export class TreeViewComponent implements OnInit {
   isSelected(component) {
     return this.selectedComponent == component;
   }
+
+
+/** codigo responsável por fazer o controle drag-and-drop */
+
+drop(event: CdkDragDrop<any[]>) {
+  //moveItemInArray(this.movies, event.previousIndex, event.currentIndex);
+}
 
 }

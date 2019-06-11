@@ -13,10 +13,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 // material design
-import {MatGridListModule, MatMenu, MatMenuModule, MatButtonModule, MatIconModule, MatInputModule, MatTreeModule} from '@angular/material';
+import {MatGridListModule,  MatMenu, MatMenuModule, MatButtonModule, MatIconModule, MatInputModule, MatTreeModule} from '@angular/material';
 import { PageListComponent } from './page-list/page-list.component';
 import { FormsModule } from '@angular/forms';
 
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatInputModule,
     MatTreeModule,
+    DragDropModule,
     MatButtonModule
   ],
   providers: [],

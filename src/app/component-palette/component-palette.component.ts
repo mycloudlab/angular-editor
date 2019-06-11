@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
+
+
 
 @Component({
   selector: 'component-palette',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component-palette.component.css']
 })
 export class ComponentPaletteComponent implements OnInit {
+
+
+  @Input()
+  libraries:any;
 
   constructor() { }
 
